@@ -20,7 +20,9 @@ function App() {
     return (
         <div className="app-container">
             <header className="app-header">
-                <div className="logo">Ingenieurbüro</div>
+                <div className="logo">
+                    <Link to="/">Ingenieurbüro</Link> {/* Wrap with Link */}
+                </div>
                 <nav>
                     <ul>
                         <li><Link to="/">Home</Link></li>
@@ -83,7 +85,6 @@ function PopupWrapper({ children }) {
         }
     };
 
-    // Wrap the children with a function that provides the handleClose function
     const childrenWithProps = React.Children.map(children, child => {
       if (React.isValidElement(child)) {
         return React.cloneElement(child, { handleClose });
