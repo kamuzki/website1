@@ -4,7 +4,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* More pronounced gradient */
+  background: linear-gradient(135deg, #f2f2f2 0%, #d9d9d9 100%); /* Light grey background */
   color: #333;
   line-height: 1.6;
 }
@@ -16,20 +16,23 @@ body {
 }
 
 .app-header {
-    background: linear-gradient(135deg, #70b0fa 0%, #2e71f3 100%); /* iOS-inspired blue gradient */
-    color: white;
-    padding: 1.2rem 1rem; /* Slightly more padding */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
-    border-radius: 0 0 15px 15px;
+  background: rgba(220, 220, 220, 0.7); /* Grey Glassmorphism effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  color: #444; /* Dark grey text */
+  padding: 1.2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 0 0 15px 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
 }
 
 .logo {
-  font-size: 2rem; /* Larger logo */
+  font-size: 2rem;
   font-weight: 600;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  color: #333; /* Dark grey logo */
 }
 
 nav ul {
@@ -40,63 +43,66 @@ nav ul {
 }
 
 nav li {
-  margin-left: 1.8rem; /* More spacing */
+  margin-left: 1.8rem;
 }
 
 nav li a {
   text-decoration: none;
-  color: #fff;
+  color: #444; /* Darker grey for text */
   font-weight: 400;
-  transition: all 0.3s ease; /* Smooth transition for all properties */
-  padding: 0.6rem 0.9rem; /* Slightly larger padding */
-  border-radius: 10px; /* More rounded corners */
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  transition: all 0.3s ease;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
 }
 
 nav li a:hover {
-  background-color: rgba(255, 255, 255, 0.3); /* More opaque on hover */
-  transform: translateY(-2px); /* Slight lift effect */
+  background-color: rgba(0, 0, 0, 0.1); /* Darker on hover */
+  transform: translateY(-2px);
 }
 
 .app-main {
-  padding: 2.5rem; /* More padding */
+  padding: 2.5rem;
   flex-grow: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Wider minimum column width */
-  gap: 2.5rem; /* More gap */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
 }
 
 .app-footer {
-  background: linear-gradient(135deg, #2e71f3 0%, #70b0fa 100%); /* iOS-inspired blue gradient */
-  color: white;
+  background: rgba(220, 220, 220, 0.7); /* Grey Glassmorphism effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  color: #444; /* Dark grey text */
   text-align: center;
-  padding: 1.2rem; /* Slightly more padding */
-  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  padding: 1.2rem;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.1);
   border-radius: 15px 15px 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Widget Styles */
 .widget {
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
-  border-radius: 16px; /* More rounded corners */
-  padding: 2rem; /* More padding */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  backdrop-filter: blur(10px); /* iOS-like blur effect */
+  background: rgba(255, 255, 255, 0.8); /* Glassmorphism - more opaque */
+  backdrop-filter: blur(15px); /* Increased blur */
+  -webkit-backdrop-filter: blur(15px); /* For Safari */
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0,0,0, 0.05);
 }
 
 .widget:hover {
-  transform: scale(1.03); /* Slight scale on hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  background-color: rgba(255, 255, 255, 1); /* Solid white on hover */
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .widget h2 {
   margin-top: 0;
-  font-size: 1.6rem; /* Slightly larger heading */
+  font-size: 1.6rem;
   font-weight: 600;
-  color: #2e71f3; /* iOS-inspired blue color */
-  margin-bottom: 1.2rem; /* More bottom margin */
+  color: #555; /* Darker grey for headings */
+  margin-bottom: 1.2rem;
 }
 
 /* Home Page Styles */
@@ -106,9 +112,9 @@ nav li a:hover {
 }
 
 .home-text {
-  margin-bottom: 1.2rem; /* More bottom margin */
-  font-size: 1.2rem; /* Slightly larger font size */
-  color: #444; /* Slightly darker text */
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  color: #444;
 }
 
 /* Services Page Styles */
@@ -118,9 +124,9 @@ nav li a:hover {
 }
 
 .services-list li {
-  margin-bottom: 0.9rem; /* More bottom margin */
-  padding-left: 1.2rem; /* More left padding */
-  border-left: 4px solid #2e71f3; /* Thicker and iOS-inspired blue color */
+  margin-bottom: 0.9rem;
+  padding-left: 1.2rem;
+  border-left: 4px solid #666; /* Darker grey border */
   line-height: 1.5;
 }
 
@@ -140,18 +146,18 @@ nav li a:hover {
 }
 
 .team-member {
-  margin-bottom: 1.2rem; /* More bottom margin */
+  margin-bottom: 1.2rem;
 }
 
 .team-member h3 {
-  margin-bottom: 0.3rem; /* Slightly more bottom margin */
-  font-size: 1.3rem; /* Slightly larger font size */
+  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  color: #2e71f3; /* iOS-inspired blue color */
+  color: #555; /* Darker grey for headings */
 }
 
 /* Contact Page Styles */
 .contact-info p {
-  margin-bottom: 0.9rem; /* More bottom margin */
+  margin-bottom: 0.9rem;
   line-height: 1.5;
 }
