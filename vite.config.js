@@ -7,11 +7,11 @@ export default defineConfig({
   plugins: [
     react(),
     EnvironmentPlugin({
-      PUBLIC_URL: '/',
+      PUBLIC_URL: '',
     }),
   ],
   base: '/',
-  publicDir: 'public',
+  publicDir: false,
   build: {
     rollupOptions: {
       output: {

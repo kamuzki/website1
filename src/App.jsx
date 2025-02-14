@@ -5,13 +5,12 @@ import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
-import Logo from `${process.env.PUBLIC_URL}logo.png`;
 
 function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <img src={Logo} alt="Logo" className="logo" />
+        <div className="logo">Ingenieurbüro</div>
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>

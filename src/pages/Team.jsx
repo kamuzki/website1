@@ -2,7 +2,7 @@ import React from 'react';
 
 function Team() {
   return (
-    <div>
+    <div className="widget">
       <h2>Unser Team</h2>
       <ul className="team-list">
         <li className="team-member">

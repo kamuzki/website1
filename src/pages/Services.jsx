@@ -2,7 +2,7 @@ import React from 'react';
 
 function Services() {
   return (
-    <div>
+    <div className="widget">
       <h2>Unsere Leistungen</h2>
       <ul className="services-list">
         <li>Elektroplanung</li>
