@@ -1,12 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+/* CSS Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
   background: linear-gradient(135deg, #f2f2f2 0%, #d9d9d9 100%);
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
 }
 
 .app-container {
@@ -43,8 +51,6 @@ body {
 
 nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
 }
 
@@ -71,9 +77,11 @@ nav li a:hover {
   padding: 2.5rem;
   flex-grow: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Keep this */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Back to 300px min */
   gap: 2rem;
   position: relative;
+  max-width: 1280px; /* Limit width for large screens */
+  margin: 0 auto; /* Center the grid */
 }
 
 .app-footer {
@@ -116,8 +124,10 @@ nav li a:hover {
   opacity: 0; /* Initially hidden */
   transform: scale(0.9); /* Initially scaled down */
   animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; /* Animation */
-  margin: 0 auto; /* Keep this for centering */
-  /* Removed max-width */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px; /* Consistent max-width */
+  word-wrap: break-word; /* Allow long words to break */
 }
 
 .widget:hover {
@@ -141,8 +151,12 @@ nav li a:hover {
 
 /* Home Page Styles */
 .home-container {
-  grid-column: 1 / -1;
-  text-align: center;
+  grid-column: 1 / -1; /* Ensure it spans the full grid width */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically (if needed) */
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .home-text {
@@ -154,7 +168,6 @@ nav li a:hover {
 /* Services Page Styles */
 .services-list {
   list-style: none;
-  padding: 0;
 }
 
 .widget-link {
@@ -175,7 +188,6 @@ nav li a:hover {
 /* Team Page Styles */
 .team-list {
   list-style: none;
-  padding: 0;
 }
 
 .team-member {
@@ -243,6 +255,7 @@ nav li a:hover {
     grid-template-columns: 1fr;
     padding: 1rem;
     gap: 1rem;
+    max-width: none; /* Remove max-width on mobile */
   }
 
   .widget {

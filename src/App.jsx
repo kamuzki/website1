@@ -20,6 +20,10 @@ import Datenschutz from './pages/Datenschutz';
 import UeberUns from './pages/UeberUns';
 
 function App() {
+    useEffect(() => {
+        console.log("App component rendered"); // Debugging log
+    }, []);
+
     return (
         <div className="app-container">
             <header className="app-header">
