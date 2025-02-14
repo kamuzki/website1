@@ -4,7 +4,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(120deg, #f6f8fa, #e9edf1);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* More pronounced gradient */
   color: #333;
   line-height: 1.6;
 }
@@ -16,18 +16,20 @@ body {
 }
 
 .app-header {
-  background: linear-gradient(120deg, #0056b3, #003a70);
-  color: white;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #70b0fa 0%, #2e71f3 100%); /* iOS-inspired blue gradient */
+    color: white;
+    padding: 1.2rem 1rem; /* Slightly more padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    border-radius: 0 0 15px 15px;
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 2rem; /* Larger logo */
   font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 nav ul {
@@ -38,59 +40,63 @@ nav ul {
 }
 
 nav li {
-  margin-left: 1.5rem;
+  margin-left: 1.8rem; /* More spacing */
 }
 
 nav li a {
   text-decoration: none;
-  color: #ddd;
+  color: #fff;
   font-weight: 400;
-  transition: color 0.3s ease;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  padding: 0.6rem 0.9rem; /* Slightly larger padding */
+  border-radius: 10px; /* More rounded corners */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
 }
 
 nav li a:hover {
-  color: #fff;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.3); /* More opaque on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
 .app-main {
-  padding: 2rem;
+  padding: 2.5rem; /* More padding */
   flex-grow: 1;
-  display: grid; /* Use grid for main layout */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-  gap: 2rem; /* Space between widgets */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Wider minimum column width */
+  gap: 2.5rem; /* More gap */
 }
 
 .app-footer {
-  background: linear-gradient(120deg, #003a70, #0056b3);
+  background: linear-gradient(135deg, #2e71f3 0%, #70b0fa 100%); /* iOS-inspired blue gradient */
   color: white;
   text-align: center;
-  padding: 1rem;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+  padding: 1.2rem; /* Slightly more padding */
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  border-radius: 15px 15px 0 0;
 }
 
 /* Widget Styles */
 .widget {
-  background-color: white;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  border-radius: 16px; /* More rounded corners */
+  padding: 2rem; /* More padding */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  backdrop-filter: blur(10px); /* iOS-like blur effect */
 }
 
 .widget:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03); /* Slight scale on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  background-color: rgba(255, 255, 255, 1); /* Solid white on hover */
 }
 
 .widget h2 {
   margin-top: 0;
-  font-size: 1.5rem;
+  font-size: 1.6rem; /* Slightly larger heading */
   font-weight: 600;
-  color: #0056b3;
-  margin-bottom: 1rem;
+  color: #2e71f3; /* iOS-inspired blue color */
+  margin-bottom: 1.2rem; /* More bottom margin */
 }
 
 /* Home Page Styles */
@@ -100,9 +106,9 @@ nav li a:hover {
 }
 
 .home-text {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    color: #555;
+  margin-bottom: 1.2rem; /* More bottom margin */
+  font-size: 1.2rem; /* Slightly larger font size */
+  color: #444; /* Slightly darker text */
 }
 
 /* Services Page Styles */
@@ -112,15 +118,15 @@ nav li a:hover {
 }
 
 .services-list li {
-  margin-bottom: 0.75rem;
-  padding-left: 1rem;
-  border-left: 3px solid #0056b3;
-  line-height: 1.4;
+  margin-bottom: 0.9rem; /* More bottom margin */
+  padding-left: 1.2rem; /* More left padding */
+  border-left: 4px solid #2e71f3; /* Thicker and iOS-inspired blue color */
+  line-height: 1.5;
 }
 
 /* Projects Page Styles */
 .projects-grid {
-    display: contents; /* Use the parent grid */
+  display: contents;
 }
 
 .project-card {
@@ -134,18 +140,18 @@ nav li a:hover {
 }
 
 .team-member {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem; /* More bottom margin */
 }
 
 .team-member h3 {
-    margin-bottom: 0.25rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #0056b3;
+  margin-bottom: 0.3rem; /* Slightly more bottom margin */
+  font-size: 1.3rem; /* Slightly larger font size */
+  font-weight: 600;
+  color: #2e71f3; /* iOS-inspired blue color */
 }
 
 /* Contact Page Styles */
 .contact-info p {
-  margin-bottom: 0.75rem;
-  line-height: 1.4;
+  margin-bottom: 0.9rem; /* More bottom margin */
+  line-height: 1.5;
 }
