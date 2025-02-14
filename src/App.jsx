@@ -63,34 +63,35 @@ function App() {
 function PopupWrapper({ children }) {
     const [isActive, setIsActive] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation();
-    const timeoutRef = useRef(null);
-    const containerRef = useRef(null);
+    const [isClosing, setIsClosing] = useState(false);
 
     useEffect(() => {
-        // Use requestAnimationFrame to ensure the browser has rendered the initial state
         requestAnimationFrame(() => {
             setIsActive(true);
         });
-        return () => {
-            clearTimeout(timeoutRef.current);
-        };
     }, []);
 
     const handleClose = () => {
-        setIsActive(false);
-        timeoutRef.current = setTimeout(() => {
-            navigate(-1); // Go back to the previous page
-        }, 700);
+        if (!isClosing) { // Prevent multiple calls
+            setIsClosing(true);
+        }
+    };
+
+    const handleAnimationEnd = (event) => {
+        // Check if the animation that ended is the opacity transition of the container
+        if (isClosing && event.animationName === 'fadeOut') {
+            navigate(-1);
+        }
     };
 
     return (
         <div
-            className={`popup-container ${isActive ? 'active' : ''}`}
-            onClick={handleClose}
-            ref={containerRef}
+            className={`popup-container ${isActive ? 'active' : ''} ${isClosing ? 'closing' : ''}`}
+            onClick={handleClose} // Close on outside click
+            onAnimationEnd={handleAnimationEnd} // Navigate after animation
         >
             <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+                {/* Prevent click inside from closing */}
                 {children}
             </div>
         </div>
