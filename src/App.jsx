@@ -21,7 +21,7 @@ function App() {
         <div className="app-container">
             <header className="app-header">
                 <div className="logo">
-                    <Link to="/">Ingenieurbüro</Link> {/* Wrap with Link */}
+                    <Link to="/">Ingenieurbüro</Link>
                 </div>
                 <nav>
                     <ul>
@@ -37,10 +37,10 @@ function App() {
             <main className="app-main">
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/team" element={<Team />} />
-                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/services" element={<Services handleClose={() => {}} />} />
+                    <Route path="/projects" element={<Projects handleClose={() => {}} />} />
+                    <Route path="/team" element={<Team handleClose={() => {}} />} />
+                    <Route path="/contact" element={<Contact handleClose={() => {}} />} />
                     <Route path="/services/elektroplanung" element={<PopupWrapper><Elektroplanung /></PopupWrapper>} />
                     <Route path="/services/installationstechnik" element={<PopupWrapper><Installationstechnik /></PopupWrapper>} />
                     <Route path="/services/automatisierungstechnik" element={<PopupWrapper><Automatisierungstechnik /></PopupWrapper>} />
@@ -85,13 +85,13 @@ function PopupWrapper({ children }) {
         }
     };
 
+    // Pass handleClose to all children
     const childrenWithProps = React.Children.map(children, child => {
-      if (React.isValidElement(child)) {
-        return React.cloneElement(child, { handleClose });
-      }
-      return child;
+        if (React.isValidElement(child)) {
+            return React.cloneElement(child, { handleClose: handleClose });
+        }
+        return child;
     });
-
 
     return (
         <div
