@@ -5,6 +5,10 @@ import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
+import Elektroplanung from './pages/Elektroplanung';
+import Installationstechnik from './pages/Installationstechnik';
+import Automatisierungstechnik from './pages/Automatisierungstechnik';
+import Energieberatung from './pages/Energieberatung';
 
 function App() {
   return (
@@ -29,6 +33,10 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services/elektroplanung" element={<Elektroplanung />} />
+          <Route path="/services/installationstechnik" element={<Installationstechnik />} />
+          <Route path="/services/automatisierungstechnik" element={<Automatisierungstechnik />} />
+          <Route path="/services/energieberatung" element={<Energieberatung />} />
         </Routes>
       </main>
 
