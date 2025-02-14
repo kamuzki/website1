@@ -88,11 +88,12 @@ nav li a:hover {
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   border: 1px solid rgba(0,0,0, 0.05);
 }
 
 .widget:hover {
+    background-color: rgba(255,255,255, 0.9);
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
@@ -123,19 +124,10 @@ nav li a:hover {
   padding: 0;
 }
 
-.service-link {
+.widget-link {
     text-decoration: none;
-    color: #444;
-    padding: 0.6rem 1rem;
-    border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    margin-bottom: 0.5rem;
-}
-
-.service-link:hover{
-    background-color: rgba(0,0,0, 0.1);
+    color: inherit; /* Inherit text color from parent */
+    display: block; /* Make the link fill the entire widget */
 }
 
 /* Projects Page Styles */

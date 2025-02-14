@@ -9,6 +9,9 @@ import Elektroplanung from './pages/Elektroplanung';
 import Installationstechnik from './pages/Installationstechnik';
 import Automatisierungstechnik from './pages/Automatisierungstechnik';
 import Energieberatung from './pages/Energieberatung';
+import Projekt1 from './pages/Projekt1';
+import Projekt2 from './pages/Projekt2';
+import Projekt3 from './pages/Projekt3';
 
 function App() {
   return (
@@ -37,6 +40,9 @@ function App() {
           <Route path="/services/installationstechnik" element={<Installationstechnik />} />
           <Route path="/services/automatisierungstechnik" element={<Automatisierungstechnik />} />
           <Route path="/services/energieberatung" element={<Energieberatung />} />
+          <Route path="/projects/projekt1" element={<Projekt1 />} />
+          <Route path="/projects/projekt2" element={<Projekt2 />} />
+          <Route path="/projects/projekt3" element={<Projekt3 />} />
         </Routes>
       </main>
 
