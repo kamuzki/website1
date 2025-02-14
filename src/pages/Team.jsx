@@ -1,24 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Team() {
   return (
-    <div className="widget">
-      <h2>Unser Team</h2>
-      <ul className="team-list">
-        <li className="team-member">
-          <h3>Mitarbeiter 1</h3>
+    <>
+      <Link to="/team/mitarbeiter1" className="widget-link">
+        <div className="widget">
+          <h2>Mitarbeiter 1</h2>
           <p>Position</p>
-        </li>
-        <li className="team-member">
-          <h3>Mitarbeiter 2</h3>
+        </div>
+      </Link>
+      <Link to="/team/mitarbeiter2" className="widget-link">
+        <div className="widget">
+          <h2>Mitarbeiter 2</h2>
           <p>Position</p>
-        </li>
-        <li className="team-member">
-          <h3>Mitarbeiter 3</h3>
+        </div>
+      </Link>
+      <Link to="/team/mitarbeiter3" className="widget-link">
+        <div className="widget">
+          <h2>Mitarbeiter 3</h2>
           <p>Position</p>
-        </li>
-      </ul>
-    </div>
+        </div>
+      </Link>
+    </>
   );
 }
 

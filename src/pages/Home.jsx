@@ -4,7 +4,9 @@ function Home() {
   return (
     <div className="home-container widget">
       <h2>Willkommen bei Ihrem Ingenieurbüro für Elektrotechnik</h2>
-      <p className="home-text">Wir bieten innovative Lösungen im Bereich Elektrotechnik. Von der Planung bis zur Umsetzung – wir sind Ihr kompetenter Partner.</p>
+      <p className="home-text">
+        Wir sind Ihr kompetenter Partner für innovative Lösungen im Bereich Elektrotechnik. Von der detaillierten Planung bis zur professionellen Umsetzung bieten wir umfassende Dienstleistungen, die auf Ihre individuellen Bedürfnisse zugeschnitten sind.
+      </p>
     </div>
   );
 }

@@ -12,6 +12,9 @@ import Energieberatung from './pages/Energieberatung';
 import Projekt1 from './pages/Projekt1';
 import Projekt2 from './pages/Projekt2';
 import Projekt3 from './pages/Projekt3';
+import Mitarbeiter1 from './pages/Mitarbeiter1';
+import Mitarbeiter2 from './pages/Mitarbeiter2';
+import Mitarbeiter3 from './pages/Mitarbeiter3';
 
 function App() {
   return (
@@ -43,6 +46,9 @@ function App() {
           <Route path="/projects/projekt1" element={<Projekt1 />} />
           <Route path="/projects/projekt2" element={<Projekt2 />} />
           <Route path="/projects/projekt3" element={<Projekt3 />} />
+          <Route path="/team/mitarbeiter1" element={<Mitarbeiter1 />} />
+          <Route path="/team/mitarbeiter2" element={<Mitarbeiter2 />} />
+          <Route path="/team/mitarbeiter3" element={<Mitarbeiter3 />} />
         </Routes>
       </main>
 

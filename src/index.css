@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -16,23 +16,23 @@ body {
 }
 
 .app-header {
-  background: rgba(220, 220, 220, 0.7); /* Glassmorphism effect */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
-  color: #444; /* Dark grey text */
+  background: rgba(235, 235, 235, 0.8); /* Consistent Glassmorphism */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #333;
   padding: 1.2rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 15px 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .logo {
   font-size: 2rem;
-  font-weight: 600;
-  color: #333; /* Dark grey logo */
+  font-weight: 700; /* Bolder logo */
+  color: #333;
 }
 
 nav ul {
@@ -48,7 +48,7 @@ nav li {
 
 nav li a {
   text-decoration: none;
-  color: #444; /* Darker grey for text */
+  color: #444;
   font-weight: 400;
   transition: all 0.3s ease;
   padding: 0.6rem 0.9rem;
@@ -56,8 +56,9 @@ nav li a {
 }
 
 nav li a:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Darker on hover */
+  background-color: rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
+  color: #0056b3; /* Accent color on hover */
 }
 
 .app-main {
@@ -69,10 +70,10 @@ nav li a:hover {
 }
 
 .app-footer {
-  background: rgba(220, 220, 220, 0.7); /* Glassmorphism effect */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
-  color: #444; /* Dark grey text */
+  background: rgba(235, 235, 235, 0.8); /* Consistent Glassmorphism */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #444;
   text-align: center;
   padding: 1.2rem;
   box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.1);
@@ -82,9 +83,9 @@ nav li a:hover {
 
 /* Widget Styles */
 .widget {
-  background: rgba(255, 255, 255, 0.8); /* Glassmorphism - more opaque */
-  backdrop-filter: blur(15px); /* Increased blur */
-  -webkit-backdrop-filter: blur(15px); /* For Safari */
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -93,16 +94,16 @@ nav li a:hover {
 }
 
 .widget:hover {
-    background-color: rgba(255,255,255, 0.9);
+    background-color: rgba(255,255,255, 0.95);
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .widget h2 {
   margin-top: 0;
-  font-size: 1.6rem;
+  font-size: 1.8rem; /* Larger heading */
   font-weight: 600;
-  color: #555; /* Darker grey for headings */
+  color: #444;
   margin-bottom: 1.2rem;
 }
 
@@ -175,4 +176,44 @@ nav li a:hover {
 
 .back-link:hover {
     background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column; /* Stack logo and navigation */
+    align-items: stretch; /* Stretch items to full width */
+    padding: 1rem 0;
+    border-radius: 0;
+  }
+
+  .logo {
+    margin-bottom: 1rem; /* Add space below logo */
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack navigation items */
+    width: 100%; /* Full width */
+  }
+
+  nav li {
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center navigation items */
+    width: 100%;
+  }
+    nav li a{
+        display: block;
+        width: 100%;
+    }
+
+  .app-main {
+    grid-template-columns: 1fr; /* Single column layout */
+    padding: 1rem; /* Reduced padding */
+    gap: 1rem;
+  }
+
+  .widget {
+    padding: 1.5rem; /* Reduced padding */
+  }
 }
