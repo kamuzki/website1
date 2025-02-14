@@ -15,6 +15,9 @@ import Projekt3 from './pages/Projekt3';
 import Mitarbeiter1 from './pages/Mitarbeiter1';
 import Mitarbeiter2 from './pages/Mitarbeiter2';
 import Mitarbeiter3 from './pages/Mitarbeiter3';
+import Impressum from './pages/Impressum';
+import Datenschutz from './pages/Datenschutz';
+import UeberUns from './pages/UeberUns';
 
 function App() {
     return (
@@ -37,10 +40,10 @@ function App() {
             <main className="app-main">
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/services" element={<Services handleClose={() => {}} />} />
-                    <Route path="/projects" element={<Projects handleClose={() => {}} />} />
-                    <Route path="/team" element={<Team handleClose={() => {}} />} />
-                    <Route path="/contact" element={<Contact handleClose={() => {}} />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/team" element={<Team />} />
+                    <Route path="/contact" element={<Contact />} />
                     <Route path="/services/elektroplanung" element={<PopupWrapper><Elektroplanung /></PopupWrapper>} />
                     <Route path="/services/installationstechnik" element={<PopupWrapper><Installationstechnik /></PopupWrapper>} />
                     <Route path="/services/automatisierungstechnik" element={<PopupWrapper><Automatisierungstechnik /></PopupWrapper>} />
@@ -51,11 +54,19 @@ function App() {
                     <Route path="/team/mitarbeiter1" element={<PopupWrapper><Mitarbeiter1 /></PopupWrapper>} />
                     <Route path="/team/mitarbeiter2" element={<PopupWrapper><Mitarbeiter2 /></PopupWrapper>} />
                     <Route path="/team/mitarbeiter3" element={<PopupWrapper><Mitarbeiter3 /></PopupWrapper>} />
+                    <Route path="/impressum" element={<PopupWrapper><Impressum /></PopupWrapper>} />
+                    <Route path="/datenschutz" element={<PopupWrapper><Datenschutz /></PopupWrapper>} />
+                    <Route path="/ueber-uns" element={<PopupWrapper><UeberUns /></PopupWrapper>} />
 
                 </Routes>
             </main>
 
             <footer className="app-footer">
+                <div className="footer-links">
+                    <Link to="/impressum">Impressum</Link>
+                    <Link to="/datenschutz">Datenschutz</Link>
+                    <Link to="/ueber-uns">Über uns</Link>
+                </div>
                 <p>&copy; 2024 Ingenieurbüro für Elektrotechnik</p>
             </footer>
         </div>

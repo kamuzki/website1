@@ -71,8 +71,8 @@ nav li a:hover {
   padding: 2.5rem;
   flex-grow: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Keep this */
+  gap: 2rem;
   position: relative;
 }
 
@@ -88,6 +88,21 @@ nav li a:hover {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.footer-links {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    margin: 0 1rem;
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #0056b3;
+}
+
 /* Widget Styles */
 .widget {
   background: rgba(255, 255, 255, 0.9);
@@ -101,6 +116,8 @@ nav li a:hover {
   opacity: 0; /* Initially hidden */
   transform: scale(0.9); /* Initially scaled down */
   animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; /* Animation */
+  margin: 0 auto; /* Keep this for centering */
+  /* Removed max-width */
 }
 
 .widget:hover {
@@ -231,6 +248,21 @@ nav li a:hover {
   .widget {
     padding: 1.5rem;
   }
+
+    .app-footer {
+        padding: 1rem;
+        border-radius: 0;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links a {
+        margin: 0.5rem 0;
+    }
 }
 
 /* Popup Styles */
@@ -267,7 +299,7 @@ nav li a:hover {
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  max-width: 80%;
+  max-width: 600px; /* Consistent width */
   max-height: 80vh;
   overflow-y: auto;
   transform: scale(0.6);
