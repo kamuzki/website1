@@ -3,12 +3,12 @@ import React from 'react';
 
     function Mitarbeiter2() {
         return (
-            <div className="widget">
+            <>
                 <h2>Mitarbeiter 2</h2>
                 <p>Position</p>
                 <p>Details about Mitarbeiter 2...</p>
                 <Link to="/team" className="back-link">Zurück zum Team</Link>
-            </div>
+            </>
         );
     }
 
