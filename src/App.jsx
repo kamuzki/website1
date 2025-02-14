@@ -72,27 +72,34 @@ function PopupWrapper({ children }) {
     }, []);
 
     const handleClose = () => {
-        if (!isClosing) { // Prevent multiple calls
+        if (!isClosing) {
             setIsClosing(true);
         }
     };
 
     const handleAnimationEnd = (event) => {
-        // Check if the animation that ended is the opacity transition of the container
         if (isClosing && event.animationName === 'fadeOut') {
             navigate(-1);
         }
     };
 
+    // Wrap the children with a function that provides the handleClose function
+    const childrenWithProps = React.Children.map(children, child => {
+      if (React.isValidElement(child)) {
+        return React.cloneElement(child, { handleClose });
+      }
+      return child;
+    });
+
+
     return (
         <div
             className={`popup-container ${isActive ? 'active' : ''} ${isClosing ? 'closing' : ''}`}
-            onClick={handleClose} // Close on outside click
-            onAnimationEnd={handleAnimationEnd} // Navigate after animation
+            onClick={handleClose}
+            onAnimationEnd={handleAnimationEnd}
         >
             <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-                {/* Prevent click inside from closing */}
-                {children}
+                {childrenWithProps}
             </div>
         </div>
     );

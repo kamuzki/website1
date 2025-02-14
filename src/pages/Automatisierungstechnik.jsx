@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Automatisierungstechnik() {
+function Automatisierungstechnik({ handleClose }) { // Receive handleClose
     return (
         <>
             <h2>Automatisierungstechnik</h2>
@@ -14,7 +14,8 @@ function Automatisierungstechnik() {
                 <li>Visualisierung von Prozessen</li>
                 <li>Inbetriebnahme und Schulung</li>
             </ul>
-            <Link to="/services" className="back-link">Zurück zu Leistungen</Link>
+            {/* Use onClick to call handleClose */}
+            <a href="#" onClick={(e) => { e.preventDefault(); handleClose(); }} className="back-link">Zurück zu Leistungen</a>
         </>
     );
 }

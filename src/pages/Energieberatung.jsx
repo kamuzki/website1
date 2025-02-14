@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Energieberatung() {
+function Energieberatung({handleClose}) {
     return (
         <>
             <h2>Energieberatung</h2>
@@ -14,7 +14,7 @@ function Energieberatung() {
                 <li>Beratung zu Fördermöglichkeiten</li>
                 <li>Erstellung von Energieausweisen</li>
             </ul>
-            <Link to="/services" className="back-link">Zurück zu Leistungen</Link>
+            <a href="#" onClick={(e) => { e.preventDefault(); handleClose(); }} className="back-link">Zurück zu Leistungen</a>
         </>
     );
 }
