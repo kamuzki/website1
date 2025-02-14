@@ -1,0 +1,2 @@
+<boltAction type="file" filePath="src/assets/home-image.jpg" />
+  <boltAction type="start">npm run dev

@@ -1,0 +1,2 @@
+<boltAction type="file" filePath="public/home-image.jpg" />
+  <boltAction type="shell">rm -rf src/assets
