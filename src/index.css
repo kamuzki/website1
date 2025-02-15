@@ -126,25 +126,46 @@
       border-radius: 16px;
       padding: 2rem;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
       border: 1px solid rgba(0, 0, 0, 0.05);
       margin: 0 auto;
       width: 100%;
       max-width: 600px;
       word-wrap: break-word;
+      display: flex; /* Make the widget a flex container */
+      flex-direction: column; /* Stack children vertically */
+      justify-content: space-between; /* Push content to top and bottom */
+      position: relative; /* Position relative for icon positioning */
     }
 
+    /* Enhanced Hover Effect */
     .widget:hover {
-      transform: translateY(-5px); /* Slight lift on hover */
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px); /* Slight lift */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+      background-color: #f0f8ff; /* Very light blue background */
     }
 
     .widget h2 {
       margin-top: 0;
-      font-size: 1.8rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 0.5rem;
+    }
+    .widget h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
       font-weight: 600;
       color: #444;
       margin-bottom: 1.2rem;
+    }
+    .project-icon {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 2rem; /* Adjust icon size as needed */
+      color: #007bff; /* Icon color */
+      margin-right: 2rem; /* Add right margin for spacing */
     }
 
     /* Home Page Styles */
@@ -176,11 +197,6 @@
       text-decoration: none;
       color: inherit;
       display: block;
-      transition: background-color 0.3s ease; /* Smooth background transition */
-    }
-
-    .widget-link:hover {
-        background-color: rgba(0, 123, 255, 0.1); /* Light blue on hover */
     }
 
     /* Projects Page Styles */
@@ -287,5 +303,3 @@
         padding: 1rem;
       }
     }
-
-    /* Remove popup styles */
