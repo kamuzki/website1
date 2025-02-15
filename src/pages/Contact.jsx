@@ -1,21 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-function Contact() {
-  const [isMounted, setIsMounted] = useState(false);
+    function Contact() {
+      return (
+        <div className="widget">
+          <h2>Kontaktieren Sie uns</h2>
+          <p>Nehmen Sie Kontakt mit uns auf.</p>
+          <p>Adresse: Musteradresse</p>
+          <p>Telefon: 0123456789</p>
+          <p>Email: info@example.com</p>
+        </div>
+      );
+    }
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
-
-  return (
-    <div className={`widget ${isMounted ? 'animate-in' : ''}`}>
-      <h2>Kontaktieren Sie uns</h2>
-      <p>Nehmen Sie Kontakt mit uns auf.</p>
-      <p>Adresse: Musteradresse</p>
-      <p>Telefon: 0123456789</p>
-      <p>Email: info@example.com</p>
-    </div>
-  );
-}
-
-export default Contact;
+    export default Contact;

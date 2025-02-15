@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+    import { Link } from 'react-router-dom';
 
-function Projekt1({handleClose}) {
-  return (
-    <>
-      <h2>Projekt 1: Smart Home Integration</h2>
-      <p>In diesem Projekt haben wir eine umfassende Smart Home-Lösung in ein modernes Wohngebäude integriert. Dies umfasste die Steuerung von Beleuchtung, Heizung, Sicherheitssystemen und Unterhaltungselektronik über eine zentrale Schnittstelle.</p>
-      <p>Weitere Details und technische Spezifikationen...</p>
-      <a href="#" onClick={(e) => { e.preventDefault(); handleClose(); }} className="back-link">Zurück zu Projekte</a>
-    </>
-  );
-}
+    function Projekt1() {
+      return (
+        <div className="widget">
+          <h2>Projekt 1: Smart Home Integration</h2>
+          <p>In diesem Projekt haben wir eine umfassende Smart Home-Lösung in ein modernes Wohngebäude integriert. Dies umfasste die Steuerung von Beleuchtung, Heizung, Sicherheitssystemen und Unterhaltungselektronik über eine zentrale Schnittstelle.</p>
+          <p>Weitere Details und technische Spezifikationen...</p>
+          <Link to="/projects" className="back-link">Zurück zu Projekte</Link>
+        </div>
+      );
+    }
 
-export default Projekt1;
+    export default Projekt1;
