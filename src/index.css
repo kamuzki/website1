@@ -172,6 +172,11 @@ nav li a:focus::after {
 .project-icon {
   font-size: 2rem; /* Adjust icon size as needed */
   color: #007bff; /* Icon color */
+  transition: transform 0.3s ease;
+}
+
+.widget:hover .project-icon {
+  transform: rotate(360deg);
 }
 
 /* Home Page Styles */
