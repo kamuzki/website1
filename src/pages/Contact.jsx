@@ -1,10 +1,11 @@
 import React from 'react';
 
     function Contact() {
-      const widgetHeight = '150px'; // Adjust as needed
-
       return (
-        <div className="widget" style={{ minHeight: widgetHeight }}>
+        <div className="widget">
+          <div className="project-icon-container">
+            <span className="project-icon">✉️</span>
+          </div>
           <h2>Kontaktieren Sie uns</h2>
           <p>Nehmen Sie Kontakt mit uns auf.</p>
           <p>Adresse: Musteradresse</p>

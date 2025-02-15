@@ -2,28 +2,25 @@ import React from 'react';
     import { Link } from 'react-router-dom';
 
     function Team() {
-      const widgetHeight = '220px'; // Adjust as needed
+      const teamMembers = [
+        { path: '/team/mitarbeiter1', name: 'Mitarbeiter 1', position: 'Position', icon: '🧑‍💼' },
+        { path: '/team/mitarbeiter2', name: 'Mitarbeiter 2', position: 'Position', icon: '👩‍💼' },
+        { path: '/team/mitarbeiter3', name: 'Mitarbeiter 3', position: 'Position', icon: '👨‍💼' },
+      ];
 
       return (
         <>
-          <Link to="/team/mitarbeiter1" className="widget-link">
-            <div className="widget" style={{ minHeight: widgetHeight }}>
-              <h2>Mitarbeiter 1</h2>
-              <p>Position</p>
-            </div>
-          </Link>
-          <Link to="/team/mitarbeiter2" className="widget-link">
-            <div className="widget" style={{ minHeight: widgetHeight }}>
-              <h2>Mitarbeiter 2</h2>
-              <p>Position</p>
-            </div>
-          </Link>
-          <Link to="/team/mitarbeiter3" className="widget-link">
-            <div className="widget" style={{ minHeight: widgetHeight }}>
-              <h2>Mitarbeiter 3</h2>
-              <p>Position</p>
-            </div>
-          </Link>
+          {teamMembers.map((member) => (
+            <Link to={member.path} className="widget-link" key={member.path}>
+              <div className="widget">
+                <div className="project-icon-container">
+                  <span className="project-icon">{member.icon}</span>
+                </div>
+                <h2>{member.name}</h2>
+                <p>{member.position}</p>
+              </div>
+            </Link>
+          ))}
         </>
       );
     }
