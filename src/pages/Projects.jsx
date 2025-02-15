@@ -26,7 +26,7 @@ function Projects() {
     },
   ];
 
-  const widgetHeight = '250px'; // Adjust as needed
+  const widgetHeight = '200px'; // Adjust as needed
 
   return (
     <>
